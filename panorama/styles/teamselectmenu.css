@@ -1,0 +1,662 @@
+
+#loadingscreen__blur-target 
+{
+	width: 1290px;
+	height: 910px;
+	horizontal-align: center;
+	vertical-align: center;                                                                                 	
+  	                                 
+	z-index: -11;
+
+	transition-property: opacity, brightness;
+	transition-duration: 0.1s;
+}
+
+.teamselect-bg
+{
+	width: 1290px;
+	height: 910px;
+	horizontal-align: center;
+	vertical-align: center;
+	opacity: 0.9;
+}
+
+.mainmenu-content  
+{
+  	                      
+	box-shadow: 0 0 75px rgba(0,0,0,0.75) inset;
+	background-image: url( "file://{images}/hud/teamselect/teamselectvig.png" );
+	background-size: 100% 100%;
+	background-img-opacity: 1.0;
+}
+
+.team-select
+{
+	width: 100%;
+	height: 100%;
+  	                                                                                                                       
+	visibility: collapse;
+}
+
+.team-select-list-container
+{
+	width: 100%;
+	height: fit-children;
+  	                     
+	vertical-align: middle;
+	horizontal-align: center;
+
+	transition-property: position;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out; 
+}
+
+.WindowRoot_TripleMonitor .team-select-list-container
+{
+	horizontal-align: center;
+	width: 33%;
+}
+
+.team-select-list
+{
+	width: 512px;
+	height: fit-children;
+  	                         
+	flow-children: down;
+}
+
+.teamselect-blur
+{
+	height: 100%;
+	width: 100%;
+	brightness: 0.7;
+}
+
+.team-select-icon-title
+{
+	flow-children: down;
+	width: fit-children;
+	horizontal-align: center;
+	vertical-align: bottom;
+	height: 850px;
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-list__title
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	horizontal-align: center;
+	text-transform: uppercase;
+	opacity: 1.0;
+	text-align: bottom;
+	transition-property: color, brightness;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-list__title--ct
+{
+	color: grey;
+	font-weight: light;
+	font-family: Stratum2 Bold, 'Arial Unicode MS';
+	font-size: 39px;
+	text-align: bottom;
+}
+
+.team-select-list__title--t
+{
+	color: grey;
+	font-weight: light;
+	font-family: Stratum2 Bold, 'Arial Unicode MS';
+	font-size: 39px;
+	text-align: bottom;
+}
+
+.team-select-list__subtitle
+{
+	vertical-align: top;
+	font-weight: light;
+	font-family: Stratum2 Bold, 'Arial Unicode MS';
+	text-transform: none;
+	horizontal-align: center;
+	text-align: top;
+	margin-top: 10px;
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+/*.team-select-icon-title.team-select-icon-title-highlight .team-select-list__title,
+.team-select-icon-title.team-select-icon-title-highlight .team-select-list__subtitle
+{
+	color: white;	
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+*/
+
+.team-select-icon-title.team-select-icon-title-highlight .team-select-list__title--ct
+{
+	color: color-CT;	
+	-s2-mix-blend-mode: SRGBadditive;
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-icon-title.team-select-icon-title-highlight .team-select-list__title--t
+{
+	color: color-T;	
+	-s2-mix-blend-mode: SRGBadditive;
+	transition-property: color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-icon-title-t
+{
+	position: 296px 0px 0px;
+}
+
+.team-select-icon-title-ct
+{
+	position: -296px 0px 0px;
+}
+
+
+.team-select-icon-title__labels
+{
+	flow-children: down;
+	                      
+	width: 100%;
+	margin: 0px 16px 5px 16px;
+	vertical-align: bottom;
+	horizontal-align: center;
+}
+
+.team-select-icon
+{
+	width: 580px;
+	height: 635px;
+	horizontal-align: center;
+	vertical-align: top;              
+	opacity: 0.95;
+	ui-scale: 95%;
+	brightness: 1;
+
+	transition-property: opacity, ui-scale, brightness;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+
+}
+
+.team-select-icon--t
+{
+
+}
+
+.team-select-icon--ct
+{
+
+}
+
+.TeamSelectIconBorders
+{
+	width: 1155px;
+	height: 616px;
+	horizontal-align: center;
+	vertical-align: middle;
+	margin-top: 66px;
+}
+
+  
+.team-select-icon:hover{
+
+	sound: "UIPanorama.sidemenu_rollover";
+	opacity: 1.0;
+	brightness: 1.8;
+  	                                         
+}
+   
+.ChooseTeamLabel
+{
+	font-size: 55px;
+	font-weight: light;
+	font-family: Stratum2 Bold, 'Arial Unicode MS'; 
+	text-transform: uppercase;
+	vertical-align: top;
+	horizontal-align: center;
+	margin-right: 900px;
+	margin-top: 85px;
+	color: white;
+	-s2-mix-blend-mode: SRGBadditive;
+}	
+	                         
+.Tteamfacticon
+{
+	horizontal-align: center;
+	vertical-align: center;
+	height: 45px;
+	width: 45px;
+	z-index: 50;
+	overflow: noclip;
+	opacity: 0;
+	font-size: 21px;
+	font-family: Stratum2, 'Arial Unicode MS';
+	text-shadow: 2px 2px 2px #000000FF;
+	margin-right: 485px; 
+	transform: translateY(-142px);
+}	
+	                  	
+	                                 
+.Tteamfact
+{
+	font-size: 24px;
+	font-weight: light;
+	font-family: Stratum2, 'Arial Unicode MS';
+	text-shadow: 2px 2px 2px #000000FF;
+	horizontal-align: center;
+	vertical-align: center;
+	width: 480px;
+	height: 500px;
+	white-space: pre-line;
+	color: #ffffff;
+	z-index: 50;
+	overflow: noclip;
+	text-overflow: noclip;
+	line-height: 20px;
+	opacity: 0;
+	margin-left: 50px;
+}	
+
+  	                         
+.CTteamfacticon
+{
+	horizontal-align: center;
+	vertical-align: center;
+	height: 45px;
+	width: 45px;
+	z-index: 50;
+	overflow: noclip;
+	opacity: 0;
+	font-size: 21px;
+	font-family: Stratum2, 'Arial Unicode MS';
+	text-shadow: 2px 2px 2px #000000FF;
+	margin-right: 485px; 
+	transform: translateY(-142px);
+}	
+	                  	
+	                                 
+.CTteamfact
+{
+	font-size: 24px;
+	font-weight: light;
+	font-family: Stratum2, 'Arial Unicode MS';
+	text-shadow: 2px 2px 2px #000000FF;
+	horizontal-align: center;
+	vertical-align: center;
+	width: 480px;
+	height: 500px;
+	white-space: pre-line;
+	color: #ffffff;
+	z-index: 50;
+	overflow: noclip;
+	text-overflow: noclip;
+	line-height: 20px;
+	opacity: 0;
+	margin-left: 50px;
+}		             
+	             
+	                         
+	                   
+	                      
+ 
+  
+
+.team-select-icon:hover,
+.Tteamfacticon:hover,
+.CTteamfacticon:hover,
+.Tteamfact:hover,
+.CTteamfact:hover
+{
+	sound-trans: "UIPanorama.team_select_rollover";
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-icon-title.team-select-icon-title-highlight .team-select-icon,
+.team-select-icon-title.team-select-icon-title-highlight .Tteamfact,
+.team-select-icon-title.team-select-icon-title-highlight .CTteamfact,
+.team-select-icon-title.team-select-icon-title-highlight .Tteamfacticon,
+.team-select-icon-title.team-select-icon-title-highlight .CTteamfacticon
+{
+  	              
+	opacity: 1;
+  	               
+
+	transition-property: opacity, ui-scale;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+
+
+               
+
+.team-select-list__teammates
+{
+	flow-children: down;
+	width: fit-children;
+	height: fit-children;
+	overflow: noclip;
+}
+
+.team-select-teammate
+{
+	visibility: visible;
+	transform: scaleY( 1 );
+	background-color: none;
+	z-index: 100;
+	transition-property: opacity, transform;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-list--t .team-select-teammate {
+	background-color: none;
+	flow-children: right;
+	horizontal-align: right;                 
+	padding-right: 400px;
+
+}
+
+.team-select-list--t .team-select-teammate:hover{
+
+	opacity: BackgroundOpacity;
+	brightness: 1.5;
+  	                                         
+}
+
+.team-select-list--ct .team-select-teammate {
+	background-color: none;
+	flow-children: left;
+	horizontal-align: left;
+	padding-left: 400px;
+}
+
+.team-select-list--ct .team-select-teammate:hover{
+
+	opacity: BackgroundOpacity;
+	brightness: 1.5;
+  	                                         
+}
+
+.team-select-teammate.hidden
+{
+	opacity:0;
+	transform: scaleY( 0 );
+	
+	transition-property: opacity, transform, position;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-teammate__name
+{
+	vertical-align: center;
+	margin-left: 8px;
+  	                    
+	height: 24px;
+	text-overflow: ellipsis;
+	font-size: 17px;
+	font-weight: light;
+	font-family: Stratum2 Bold, 'Arial Unicode MS';
+	letter-spacing: .35px;
+	text-shadow: 1px 1px 2px #000000;
+
+}
+
+.team-select-vertical-separator
+{
+	height:100%;
+	width: 1px;
+	margin: 0px 16px;
+	horizontal-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 80%, from( rgba(255, 255, 255, 0.158) ), to( rgba(255, 255, 255, 0 )));
+	visibility: collapse;
+}
+
+.team-select__timer
+{
+	horizontal-align: center;
+	vertical-align: top;
+  	margin-left: 925px;                 
+	margin-top: 100px;
+	height: fit-children;
+	flow-children: right;
+}
+
+.team-select__timer Image
+{
+	width: 30px;
+	height: 30px;
+	margin-right: 8px;
+	vertical-align: middle;
+	horizontal-align: right;
+	color: #ffffff;
+	margin-bottom: 2px;
+	color: White;
+	-s2-mix-blend-mode: SRGBadditive;
+}
+
+.team-select__timer Label
+{
+	font-size: 31px;
+	font-weight: bold;
+	horizontal-align: right;
+	vertical-align: center;
+	opacity: 0.8;
+}
+
+.AutopickLabel
+{
+	color: grey;
+	font-weight: light;
+	font-family: Stratum2 Bold, 'Arial Unicode MS';
+}
+
+.mono-spaced-font-bold2
+{
+	color: White;
+	font-weight: bold;
+	font-family: Stratum2 Bold, 'Arial Unicode MS'; 
+	vertical-align: top;
+	horizontal-align: center;
+	-s2-mix-blend-mode: SRGBadditive;
+}
+
+.team-select-error
+{
+	flow-children: right;
+	padding:16px;
+	border-radius: 2px;
+	vertical-align: center;
+	horizontal-align: center;
+  	                    
+	wash-color: warningColor;
+	opacity: 1;
+
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-error.hidden
+{
+	opacity: 0;
+	
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.team-select-error__label
+{
+	margin-left: 8px;
+	color:white;
+}
+
+Countdown.CountdownAfterEnd
+{
+	visibility: collapse;
+}
+
+.join-spec-button
+{
+	vertical-align: top;
+	horizontal-align: center;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.team-select-actionbar
+{
+	height: 96px;
+	width: 100%;
+	vertical-align: top;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+#TeamSelectButtons
+{
+	color: grey;
+	font-family: Stratum2 Bold, 'Arial Unicode MS';
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#PopupButton White
+{
+	background-color: #00000000;
+	color: grey;
+	font-family: Stratum2 Bold, 'Arial Unicode MS';
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#TeamSelectSpectate
+{
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-right: 350px;
+	margin-bottom: 80px;
+	background-color: #00000000;
+	color: grey;
+}
+
+#TeamSelectAuto
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: 80px;
+	background-color: #00000000;
+	color: grey;
+}
+
+#TeamSelectCancel
+{
+	visibility: collapse;
+}
+
+.team-select-actionbar > .mainmenu-navbar
+{
+	flow-children: left;
+}
+
+.WindowRoot_TripleMonitor #TeamSelectButtons
+{
+	horizontal-align: center;
+	width: 33%;
+}
+
+.WindowRoot_TripleMonitor #AutojoinTimer
+{
+	width: 33%;
+}
+
+.loading-screen-model
+{
+	width: 700px;
+	height: 100%;
+	horizontal-align: center;
+	vertical-align: middle;
+	opacity: 1;
+	ui-scale: 100%;
+  	                     
+	img-shadow: -2px -2px 8px #000000;
+
+	brightness: 0.5;
+
+	transition-property: position, brightness, ui-scale, opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+	visibility: collapse;
+}
+
+.loading-screen-model--right
+{
+	position: 260px -120px 0px;
+}
+
+.loading-screen-model--left
+{
+	position: -220px -120px 0px;
+}
+
+.loading-screen-model--right.highlight,
+.loading-screen-model--left.highlight
+{
+	ui-scale: 104%;
+
+	brightness: 2.0;
+
+	transition-property: ui-scale;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.highlit-player {
+
+	animation-name: ping;
+	animation-duration: .3s;
+	                             
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+
+	brightness: 1.0;
+}
+
+@keyframes ping
+{
+	0%
+	{
+		brightness: .5;
+	}
+
+	100%
+	{
+		brightness: 1;
+	}
+}
+
+.content-controls-actions-bar
+{
+	visibility: collapse;
+}

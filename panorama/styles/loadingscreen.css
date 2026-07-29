@@ -1,0 +1,569 @@
+@define maxBlur: 6.0;
+@define loadingScreenWidth: 1220px;
+
+.loading-root
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.03);
+	transform: scale3d( 1.0, 1.0, 1.0 );
+	opacity: 1;
+	
+	                                          
+	                             
+	                                          
+}
+
+.loading-root--show
+{
+	animation-name: loading-root--show-animation;
+	animation-duration: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes 'loading-root--show-animation'
+{
+	0%
+	{
+        opacity: 0.5;
+        transform: scaleX(1.2) scaleY(1.2);
+    }
+	100%
+	{
+        opacity: 1.0;
+        transform: scaleX(1.0) scaleY(1.0);
+	}
+}
+
+.loading-root .mainmenu-content--offscreen
+{
+	position: 0px 0px 0px;
+
+	transition-property: position;
+	transition-duration: 1s;
+	transition-timing-function: ease-in-out;
+}
+
+.loading-screen-blur
+{
+	height: 100%;
+	width: 100%;
+	brightness: 1.0;
+	blur: fastgaussian( 9, 9, 7 );
+
+	                                        
+	                           
+	                                          
+}
+
+.loading-screen--unblur
+{
+	animation-name: loading-screen--unblur-animation;
+	animation-duration: 3.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes 'loading-screen--unblur-animation'
+{
+	0%
+	{
+        brightness: 1.0;
+        blur: fastgaussian( 9, 9, 7 );
+    }
+	100%
+	{
+        brightness: 1.0;
+        blur: fastgaussian( 0, 0, 0 );
+	}
+}
+
+.loading-screen-hint-contents
+{
+    height: 85px;
+    width: 1350px;
+	horizontal-align: center;
+	vertical-align: center;
+    flow-children: right;
+
+    background-image: url( "file://{images}/hud/loadingscreen/loadingbg.png");
+	background-size: 100% 100%;
+
+    margin-top: -425px;
+}
+
+.loading-screen-hint__icon
+{
+	width: 75px;
+	height: 75px;
+	overflow: noclip;
+    horizontal-align: left;
+	vertical-align: center;                
+    margin: 10px 10px 10px 10px;
+	background-size: 125% 150%; 
+}
+
+.loading-screen-hint__text
+{
+	font-size: 24px;
+	                       
+	color: #ffffff;
+	text-overflow: shrink;
+    text-align: left;
+	horizontal-align: left;
+    margin: 10px 10px 10px 4px;
+	text-shadow: 2px 2px 2px #000000FF;
+	font-weight: 100;
+	font-family: Stratum2;
+	vertical-align: center;
+	margin-right: 500px;
+}
+
+.loading-screen-contents
+{
+	margin-top: 165px;
+	height: fit-children;
+	max-height: 1200px;
+	width: 1360px;
+	horizontal-align: center;
+	vertical-align: top;
+	                          
+	                     
+	                                                                                         
+	                           
+	flow-children: down;
+	opacity: 1;
+
+	transition-property: height, opacity;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.loading-screen-contents-bottom
+{
+	                    
+	height: fit-children;
+	max-height: 810px;
+	width: 1350px;
+	horizontal-align: center;
+	vertical-align: top;
+	                          
+	                     
+	background-image: url( "file://{images}/hud/loadingscreen/loadingbg.png");
+	background-size: 100% 100%;
+	flow-children: right;
+	opacity: 1;
+
+	transition-property: height, opacity;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+	z-index: -11;
+}
+
+.loading-screen-content__overview--background
+{
+	horizontal-align: left;
+	height: 770px;
+	width: 820px;
+	margin-left: 15px; 
+	margin-top: 15px;
+
+	background-image: url( "file://{images}/overviews/default.png");
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+
+	flow-children: none;
+	z-index: -11;
+}
+
+.loading-screen-content__overview--map
+{
+	horizontal-align: center;
+	height: 100%;
+	width: 100%;
+	brightness: 1;
+	opacity: 1;
+	z-index: -11;
+
+	                               
+	                           
+	                                          
+
+	                             
+}
+
+.loading-screen-content__info
+{
+	flow-children: down;
+	width: 1350px;
+	height: 100%;
+	horizontal-align: left;
+	vertical-align: top;
+	padding: 0px 0px;
+	margin-bottom: 24px;
+	opacity: 1;
+	visibility: visible;
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.loading-screen-content__info-line
+{
+	width: 95%;
+	height: 2px;
+    vertical-align: top;
+    horizontal-align: center;
+    background-color: #000000CC;
+}
+
+.loading-screen-content__info.hidden
+{
+	opacity: 0;
+	visibility: collapse;
+
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.loading-screen-content__info__modeicon
+{
+	vertical-align: middle;
+	margin-right: 8px;
+	horizontal-align: right;
+}
+
+.loading-screen-content__titles
+{
+	flow-children: down;
+	max-width: 250px;
+	horizontal-align: left;
+	text-align: left;
+}
+
+.loading-screen-content__info__text-title
+{
+    font-family: Stratum2, 'Arial Unicode MS';
+    color: white;
+	font-size: 50px;
+	font-weight: bold;
+    text-overflow: noclip;
+    horizontal-align: left;
+    text-align: left;
+    white-space: nowrap;
+	text-shadow: 2px 2px 2px #000000FF;
+	transform: translateY(25px);
+	padding-right: 10px;
+}
+
+.loading-screen-content__info__text-title-long
+{
+    width: 370px;
+	horizontal-align: left;
+	text-align: left;
+}
+
+.loading-screen-content__info__text-title-short
+{
+    width: 260px;
+	horizontal-align: left;
+	text-align: left;
+}
+
+.loading-screen-content__mapicon-container
+{
+	width: 400px;
+	height: fit-children;
+	horizontal-align: right;
+}
+
+.loading-screen-content__info-container
+{
+    flow-children: right;
+	width: 400px;
+	height: fit-children;
+	horizontal-align: left;
+    padding: 16px 16px;
+}
+
+.loading-screen-content__info__gamemode
+{
+	flow-children: left;
+}
+
+.loading-screen-content_text-gamemode
+{
+    font-family: Stratum2, 'Arial Unicode MS';
+	font-size: 24px;
+	color: lightgrey;
+	text-overflow: shrink;
+    vertical-align: center;
+    text-align: left;
+	text-shadow: 2px 2px 1px #000000FF;
+	padding-top: 20px;
+	padding-left: 1px;
+}
+
+.loading-screen-content__info__modeicon
+{
+	visibility: collapse;
+}
+
+.loading-screen-progress-container
+{
+    width: 1350px;
+    height: 85px;
+    vertical-align: center;
+    horizontal-align: center;
+	background-image: url( "file://{images}/hud/loadingscreen/loadingbg.png");
+	background-size: 100% 100%;
+}
+
+.loading-screen-progress-secondary-container
+{
+    width: 500px;
+    height: 32px;
+    vertical-align: bottom;
+    horizontal-align: right;
+                              
+}
+
+.loading-screen-progress-text
+{
+    height: 350px;
+    width: 1330px;
+    font-family: Stratum2, 'Arial Unicode MS';
+	font-size: 24px;
+	color: #CCCCCCFF;
+	text-overflow: noclip;
+    vertical-align: bottom;
+    text-align: left; 
+	margin-Left: 12px;
+	margin-top: 25px;
+	text-shadow: 2px 2px 2px #000000FF;
+	font-weight: 100;
+	font-family: Stratum2;
+}
+
+.loading-screen-progress-secondary-text
+{
+    width: 100%;
+    font-family: Stratum2, 'Arial Unicode MS';
+	font-size: 16px;
+	color: lightgrey;
+	text-overflow: noclip;
+    vertical-align: bottom;
+    text-align: left; 
+	horizontal-align: left;
+	text-shadow: 2px 2px 2px #000000FF;
+}
+
+.loading-screen-content__info__text
+{
+    font-family: Stratum2, 'Arial Unicode MS';
+	font-size: 22px;
+	font-weight: lighter;
+	color: lightgrey;
+	text-overflow: noclip;
+    vertical-align: top;
+	text-align: left; 
+	horizontal-align: left;
+    padding: 20px 16px;
+	text-shadow: 2px 2px 2px #000000FF;
+}
+
+
+
+.loading-screen__mapicon
+{
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-top: 25px;
+	opacity: 0;
+	visibility: collapse;
+	height: 85px;
+	width: 85px;
+	overflow: noclip;
+	margin-left: 215px;
+	transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.loading-root .ProgressBarLeft
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #009933FF ), color-stop( 0.5, #00cc33FF ), to( #00ff33FF ) );
+}
+
+.loading-root ProgressBar
+{
+
+	width: 1325px;
+	height: 7px;
+	background-color: #000000E6;
+	border: 1px solid rgb(0, 0, 0, 0.0);
+	vertical-align: bottom;
+	horizontal-align: center;
+	box-shadow: none;
+	margin-bottom: 62px;
+	margin-right: 6px;
+}
+
+.loading-screen-fade--dark
+{
+	width: 100%;
+	height: 100%;
+    background-color: gradient(radial, 50% 50%, 0px 0px, 100% 100%, from( #00000000 ), color-stop( 0.4, #00000000), color-stop( 0.65, #00000000), to( #00000000 ) );      
+	background-image: url( "file://{images}/hud/loadingscreen/loadingvignette.png");
+	background-size: 101% 101%;
+}
+
+.loading-screen-fade--teams
+{
+	width: 100%;
+	height: 100%;
+    background-color: gradient(radial, 50% 50%, 0px 0px, 100% 100%, from( #00000000 ), color-stop( 0.4, #00000000), color-stop( 0.65, #00000000), to( #00000000 ) );
+}
+
+.loading-screen-model
+{
+	width: 720px;
+	height: 100%;
+	horizontal-align: center;
+	vertical-align: middle;
+	opacity: 1;
+	ui-scale: 100%;
+	margin-bottom: 128px;
+
+	transition-property: position, brightness, ui-scale;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.loading-screen-model--right
+{
+	position: 440px 0px 0px;
+}
+
+.loading-screen-model--left
+{
+	position: -440px 0px 0px;
+}
+
+.loading-screen-model--right.highlight,
+.loading-screen-model--left.highlight
+{
+	ui-scale: 108%;
+
+	transition-property: ui-scale;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.show
+{
+	opacity: 1;
+	visibility: visible;
+	blur: none;
+
+	transition-property: opacity, blur;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.showOverview
+{
+	opacity: 1;
+	visibility: visible;
+}
+
+.loading-screen--closing
+{
+	animation-name: loading-screen--closing-animation;
+	animation-duration: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes 'loading-screen--closing-animation'
+{
+	0%
+	{
+        opacity: 1.0;
+    }
+	70%
+	{
+        opacity: 1.0;
+        transform: scaleX(1.0) scaleY(1.0);
+    }
+	100%
+	{
+        opacity: 0.0;
+        transform: scaleX(1.08) scaleY(1.08);
+	}
+}
+
+.ct-spawn
+{
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
+                                          
+}
+
+.t-spawn
+{
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
+                                          
+}
+
+.bomb-zone
+{
+    width: 55px;
+    height: 55px;
+    margin-left: -20px;
+    margin-top: -29px;
+
+              
+	          
+	opacity: 1.0;
+	                        
+    img-shadow: 0px 0px 1px 2 #111111FF;
+}
+
+.hostage-alive
+{
+    width: 30px;
+    height: 44px;
+    margin-left: -11px;
+    margin-top: -16px;	
+    wash-color: #ffe25b;
+}
+
+#ProgressBarSecondary
+{
+	width: 100%;
+	height: 5px;
+	background-color: rgba(0, 0, 0, 0.671);
+	border: 0px solid rgb(58, 58, 58);
+	vertical-align: bottom;
+	border-radius: 0px;
+	margin-bottom: -20px;
+	horizontal-align: center;
+	box-shadow: none;
+}
+
+.loading-screen-progress-secondary-container .ProgressBarLeft
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( blueColor ), to( #006633FF ) );
+	visibility: collapse;
+}
