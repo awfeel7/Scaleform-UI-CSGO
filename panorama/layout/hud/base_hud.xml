@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/base.css" />
+	</styles>
+
+	<scripts>
+		<include src="file://{resources}/scripts/hud/alphachanger.js" />
+		<include src="file://{resources}/scripts/hud/alert.js" />
+		<include src="file://{resources}/scripts/hud/basehud.js" />
+	</scripts>
+
+	<Panel class="WindowRoot" hittest="false">
+		<CSGOHud id="Hud" />
+	</Panel>
+</root>
