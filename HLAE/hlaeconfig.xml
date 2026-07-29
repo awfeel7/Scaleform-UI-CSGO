@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HlaeConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>unknown</Version>
+  <Settings>
+    <LauncherCsgo>
+      <CsgoExe>please select</CsgoExe>
+      <MmcfgEnabled>false</MmcfgEnabled>
+      <Mmmcfg />
+      <GfxEnabled>false</GfxEnabled>
+      <GfxWidth>1280</GfxWidth>
+      <GfxHeight>720</GfxHeight>
+      <GfxFull>false</GfxFull>
+      <AvoidVac>true</AvoidVac>
+      <CustomLaunchOptions>-console</CustomLaunchOptions>
+      <RememberChanges>true</RememberChanges>
+    </LauncherCsgo>
+    <Launcher>
+      <CustomCmdLine>+toggleconsole</CustomCmdLine>
+      <ForceAlpha>false</ForceAlpha>
+      <FullScreen>false</FullScreen>
+      <GamePath>please select</GamePath>
+      <GfxForce>true</GfxForce>
+      <GfxWidth>800</GfxWidth>
+      <GfxHeight>600</GfxHeight>
+      <GfxBpp>32</GfxBpp>
+      <Modification>cstrike</Modification>
+      <OptimizeDesktopRes>false</OptimizeDesktopRes>
+      <OptimizeVisibilty>true</OptimizeVisibilty>
+      <RememberChanges>true</RememberChanges>
+      <RenderMode>0</RenderMode>
+    </Launcher>
+    <CustomLoader>
+      <CmdLine>-steam -insecure +sv_lan 1 -console -game migi/csgo -afxdetourpanorama</CmdLine>
+      <ProgramPath>C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo.exe</ProgramPath>
+      <InjectDlls>
+        <Dll>
+          <Path>AfxHookSource.dll</Path>
+        </Dll>
+        <Dll>
+          <Path>C:\Users\Moi\Documents\hud\death_notice_override-master\death_notice_override-master\Release\death_notice_override.dll</Path>
+        </Dll>
+      </InjectDlls>
+      <AddEnvironmentVars>SteamPath=c:\program files (x86)\steam
+SteamClientLaunch=1
+SteamGameId=740
+SteamAppId=740
+SteamOverlayGameId=Enter ID here</AddEnvironmentVars>
+    </CustomLoader>
+    <DemoTools>
+      <OutputFolder />
+    </DemoTools>
+    <UpdateCheck>0</UpdateCheck>
+    <IgnoreUpdateGuid>00000000-0000-0000-0000-000000000000</IgnoreUpdateGuid>
+  </Settings>
+</HlaeConfig>
