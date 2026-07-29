@@ -13,4 +13,4 @@ Adapted to Russian, Some things may be slightly incorrect due to adaptation to t
 
 # CREDITS
 
-To Moi's & abandonedpools & DeformedSAS scaleforms
+To Moi (base) & abandonedpools (some things) & DeformedSAS (alphachanger that has been modified using AI for correct work) scaleforms
