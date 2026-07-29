@@ -11,6 +11,14 @@ Adapted to Russian, Some things may be slightly incorrect due to adaptation to t
 <img width="2559" height="1439" alt="Снимок экрана 2026-07-29 165211" src="https://github.com/user-attachments/assets/2accd9e5-9d76-4813-8f3a-5be4d1839858" />
 <img width="923" height="360" alt="Снимок экрана 2026-07-29 165221" src="https://github.com/user-attachments/assets/4af9a0b5-f212-4e89-8b9c-8d6e94a867da" />
 
+# CHANGABLE SETTING (By abandonedpools)
+
+There is also an option to use the 2013 MVP panel. To do this, go into p_scaleform\panorama\layout\hud\hudwinpanel.xml and in line 4 change "hudwinpanel.css" to "hudwinpanelold.css", then rebuild MIGI.
+
+By default, weapon names in the bottom right corner are colored based on their rarity (similar to using cl_loadout_colorweaponnames 1 back when it worked). To disable this, open panorama/styles/hud/hudweaponselection.css and comment out everything from line 847 to 878 (it's at the very bottom) and rebuild MIGI.
+
+Works cl_hud_background_alpha
+
 # CREDITS
 
 To Kerr, Moi and Jayly help (alerts script, loadingscreen, votes, teamselect) & abandonedpools (base) & DeformedSAS (alphachanger that has been modified using AI for correct work) scaleforms
