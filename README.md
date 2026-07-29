@@ -1,6 +1,5 @@
 # Scaleform-UI-CSGO
-Adapted to Russian / Адаптирована под Русский язык
-Some things may be slightly incorrect due to adaptation to the Russian language / Некоторые вещи могут быть немного некорректными из-за адаптации к русскому языку
+Adapted to Russian, Some things may be slightly incorrect due to adaptation to the Russian language / Адаптирована под Русский язык, Некоторые вещи могут быть немного некорректными из-за адаптации к русскому языку
 
 <img width="2559" height="1439" alt="Снимок экрана 2026-07-29 164827" src="https://github.com/user-attachments/assets/3ef07f5c-3fc9-47e4-b5d1-4b8883bc38e1" />
 <img width="2559" height="1439" alt="Снимок экрана 2026-07-29 164916" src="https://github.com/user-attachments/assets/db76bd2e-c1fb-4628-ba1c-6f37b4ad9001" />
